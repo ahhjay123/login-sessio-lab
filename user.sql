@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS login_sys
+USE login_sys;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('admin', 'regular') NOT NULL DEFAULT 'regular'
+);
+
+
